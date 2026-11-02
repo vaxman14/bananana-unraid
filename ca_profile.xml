@@ -1,0 +1,5 @@
+<CommunityApplications>
+  <Profile>bananana.dev, built by CTF Designs, LLC: your own control room for servers, Macs and PCs. **bananana-brain** runs the brain (dashboard, alerts, automations, history) on your Unraid server; **bananana-node** connects the Unraid server itself to a brain. Both connect out through an end-to-end encrypted relay, so no ports are opened. Help: https://bananana.dev/help · Support: https://bananana.dev/support</Profile>
+  <Icon>https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png</Icon>
+  <WebPage>https://bananana.dev</WebPage>
+</CommunityApplications>

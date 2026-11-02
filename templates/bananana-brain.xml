@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bananana-brain</Name>
+  <Repository>romanvaxman/bananana-brain:latest</Repository>
+  <Registry>https://hub.docker.com/r/romanvaxman/bananana-brain</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Icon>https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png</Icon>
+  <WebUI>https://bananana.dev/app</WebUI>
+  <Overview>The bananana brain: your own control room for your servers, Macs and PCs, on your Unraid server. It keeps your machines' live readings, alerts, automations, files, terminals and history here, not in someone's cloud, and you reach it from anywhere at your-name.bananana.dev and in the bananana.dev apps for iPhone and Android, without opening ports or setting up a VPN: it connects out through an end-to-end encrypted relay.&#xD;
+&#xD;
+First create a free account at https://bananana.dev/start and copy the setup token it shows (it starts with bst_). Paste it into Setup token below; it's only used on the first start. Then add your other machines from the brain's Nodes page (the bananana-node app connects this Unraid server itself).</Overview>
+  <Support>https://bananana.dev/support</Support>
+  <Project>https://bananana.dev</Project>
+  <TemplateURL>https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/templates/bananana-brain.xml</TemplateURL>
+  <ReadMe>https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/README.md</ReadMe>
+  <Category>Tools:System Network:Management</Category>
+  <ExtraSearchTerms>bananana rmm monitoring remote management fleet dashboard brain</ExtraSearchTerms>
+  <Requires>A free bananana.dev account (https://bananana.dev/start) and Internet access.</Requires>
+  <MinVer>6.12.0</MinVer>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/bananana-brain" Mode="rw" Description="The brain's data: its identity, settings, users and history. Keep it backed up." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bananana-brain</Config>
+  <Config Name="Setup token" Target="BANANANA_SETUP_TOKEN" Default="" Mode="" Description="From https://bananana.dev/start (starts with bst_). Only used on the first start." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Backups" Target="/backups" Default="" Mode="rw" Description="Optional: where the nightly backup goes (for example a share on the array). Without it, backups stay in Data/backups." Type="Path" Display="advanced" Required="false" Mask="false"/>
+</Container>
