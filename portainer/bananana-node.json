@@ -1,0 +1,31 @@
+{
+  "type": 3,
+  "title": "bananana node",
+  "name": "bananana-node",
+  "description": "The bananana agent: connects this machine to your bananana brain, so you see and manage it from the dashboard and the bananana.dev apps: live CPU, memory, disk, temperature and network readings, processes, Docker containers, files and a terminal, with alerts. It connects out through an end-to-end encrypted relay; no ports are opened.",
+  "note": "It runs privileged and shares the host's processes, network and name, because it reports and manages the host itself, not just its own container. You choose what it may do (terminal, files, service control) when you create its code on the brain, and the agent enforces that. On your brain, open Nodes, Add node, Install command, pick Docker, create the command and paste the code from it (it starts with <code>bnn-</code>) into Code. It works once.",
+  "categories": [
+    "Monitoring",
+    "Management",
+    "Tools"
+  ],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png",
+  "repository": {
+    "url": "https://github.com/vaxman14/bananana-unraid",
+    "stackfile": "portainer/bananana-node/docker-compose.yml"
+  },
+  "env": [
+    {
+      "name": "BANANANA_NODE_TOKEN",
+      "label": "Code",
+      "description": "From your brain's Nodes, Add node (starts with bnn-, or a remote code). Only used on the first start."
+    },
+    {
+      "name": "BANANANA_NODE_NAME",
+      "label": "Name (optional)",
+      "description": "The name shown on the brain. Defaults to the name in the code, or the host's name.",
+      "default": ""
+    }
+  ]
+}

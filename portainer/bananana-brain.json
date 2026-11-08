@@ -1,0 +1,31 @@
+{
+  "type": 1,
+  "title": "bananana brain",
+  "name": "bananana-brain",
+  "description": "Your own control room for your servers, Macs and PCs. It keeps your machines' live readings, alerts, automations, files, terminals and history on your own hardware, and you reach it from anywhere at your-name.bananana.dev and in the bananana.dev apps for iPhone and Android, without opening ports or setting up a VPN: it connects out through an end-to-end encrypted relay.",
+  "note": "First create a free account at <a href=\"https://bananana.dev/start\" target=\"_blank\">bananana.dev/start</a> and copy the setup token it shows (it starts with <code>bst_</code>). Paste it into Setup token; it's only used on the first start. Then open your brain at the address bananana.dev gives you (or on your network at https://this-host:18771, a self-signed certificate) and add your other machines from its Nodes page. Keep the /data volume backed up. Help: <a href=\"https://bananana.dev/help/docker\" target=\"_blank\">bananana.dev/help/docker</a>",
+  "categories": [
+    "Monitoring",
+    "Management",
+    "Tools"
+  ],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png",
+  "image": "romanvaxman/bananana-brain:2026.11.5",
+  "restart_policy": "unless-stopped",
+  "ports": [
+    "18771:18771/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/data"
+    }
+  ],
+  "env": [
+    {
+      "name": "BANANANA_SETUP_TOKEN",
+      "label": "Setup token",
+      "description": "From https://bananana.dev/start (starts with bst_). Only used on the first start."
+    }
+  ]
+}
