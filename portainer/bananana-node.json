@@ -2,12 +2,12 @@
   "type": 3,
   "title": "bananana node",
   "name": "bananana-node",
-  "description": "The bananana agent: connects this machine to your bananana brain, so you see and manage it from the dashboard and the bananana.dev apps: live CPU, memory, disk, temperature and network readings, processes, Docker containers, files and a terminal, with alerts. It connects out through an end-to-end encrypted relay; no ports are opened.",
-  "note": "It runs privileged and shares the host's processes, network and name, because it reports and manages the host itself, not just its own container. You choose what it may do (terminal, files, service control) when you create its code on the brain, and the agent enforces that. On your brain, open Nodes, Add node, Install command, pick Docker, create the command and paste the code from it (it starts with <code>bnn-</code>) into Code. It works once.",
+  "description": "The bananana agent: connects this machine to your bananana brain, so you see and manage it from the dashboard and the bananana.dev apps (live CPU, memory, disk, temperature and network readings, processes, Docker containers, files and a terminal, with alerts) through an outbound end-to-end encrypted relay; no ports are opened. Website: https://bananana.dev",
+  "note": "Why privileged with the host's network, processes and name: it reports and manages the host itself (its processes, disks, Docker, files and terminal), not just its own container, so it can only deploy for Portainer admins if regular users are blocked from privileged mode. You choose what it may do (terminal, files, service control) when you create its code on the brain, and the agent enforces that. On your brain, open Nodes, Add node, Install command, pick Docker, create the command and paste the code from it (it starts with <code>bnn-</code>) into Code; it works once. It opens no ports; its identity lives in the bananana-node volume.",
   "categories": [
     "Monitoring",
-    "Management",
-    "Tools"
+    "Tools",
+    "Dashboard"
   ],
   "platform": "linux",
   "logo": "https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png",
@@ -15,6 +15,7 @@
     "url": "https://github.com/vaxman14/bananana-unraid",
     "stackfile": "portainer/bananana-node/docker-compose.yml"
   },
+  "restart_policy": "unless-stopped",
   "env": [
     {
       "name": "BANANANA_NODE_TOKEN",

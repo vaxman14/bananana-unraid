@@ -2,12 +2,12 @@
   "type": 1,
   "title": "bananana brain",
   "name": "bananana-brain",
-  "description": "Your own control room for your servers, Macs and PCs. It keeps your machines' live readings, alerts, automations, files, terminals and history on your own hardware, and you reach it from anywhere at your-name.bananana.dev and in the bananana.dev apps for iPhone and Android, without opening ports or setting up a VPN: it connects out through an end-to-end encrypted relay.",
-  "note": "First create a free account at <a href=\"https://bananana.dev/start\" target=\"_blank\">bananana.dev/start</a> and copy the setup token it shows (it starts with <code>bst_</code>). Paste it into Setup token; it's only used on the first start. Then open your brain at the address bananana.dev gives you (or on your network at https://this-host:18771, a self-signed certificate) and add your other machines from its Nodes page. Keep the /data volume backed up. Help: <a href=\"https://bananana.dev/help/docker\" target=\"_blank\">bananana.dev/help/docker</a>",
+  "description": "Your own control room for your servers, Macs and PCs: live readings, alerts, automations, files, terminals and history on your own hardware, reached from anywhere at your-name.bananana.dev and in the bananana.dev iPhone and Android apps through an outbound end-to-end encrypted relay (no open ports or VPN). Website: https://bananana.dev",
+  "note": "First create a free account at <a href=\"https://bananana.dev/start\" target=\"_blank\">bananana.dev/start</a> and copy the setup token it shows (it starts with <code>bst_</code>) into Setup token; it's only used on the first start and is the only setting you need. Then open your brain at the address bananana.dev gives you, or on your network at https://this-host:18771 (port 18771, HTTPS with a self-signed certificate, same sign-in). Its data lives in the /data volume: keep it backed up. Help: <a href=\"https://bananana.dev/help/docker\" target=\"_blank\">bananana.dev/help/docker</a>",
   "categories": [
     "Monitoring",
-    "Management",
-    "Tools"
+    "Tools",
+    "Dashboard"
   ],
   "platform": "linux",
   "logo": "https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png",
